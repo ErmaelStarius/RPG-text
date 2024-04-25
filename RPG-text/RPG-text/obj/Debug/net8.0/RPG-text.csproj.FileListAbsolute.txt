@@ -1,0 +1,15 @@
+C:\Users\ErmaelStarius\Desktop\#Project\RPG_text\RPG-text\RPG-text\RPG-text\bin\Debug\net8.0\RPG-text.exe
+C:\Users\ErmaelStarius\Desktop\#Project\RPG_text\RPG-text\RPG-text\RPG-text\bin\Debug\net8.0\RPG-text.deps.json
+C:\Users\ErmaelStarius\Desktop\#Project\RPG_text\RPG-text\RPG-text\RPG-text\bin\Debug\net8.0\RPG-text.runtimeconfig.json
+C:\Users\ErmaelStarius\Desktop\#Project\RPG_text\RPG-text\RPG-text\RPG-text\bin\Debug\net8.0\RPG-text.dll
+C:\Users\ErmaelStarius\Desktop\#Project\RPG_text\RPG-text\RPG-text\RPG-text\bin\Debug\net8.0\RPG-text.pdb
+C:\Users\ErmaelStarius\Desktop\#Project\RPG_text\RPG-text\RPG-text\RPG-text\obj\Debug\net8.0\RPG-text.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ErmaelStarius\Desktop\#Project\RPG_text\RPG-text\RPG-text\RPG-text\obj\Debug\net8.0\RPG-text.AssemblyInfoInputs.cache
+C:\Users\ErmaelStarius\Desktop\#Project\RPG_text\RPG-text\RPG-text\RPG-text\obj\Debug\net8.0\RPG-text.AssemblyInfo.cs
+C:\Users\ErmaelStarius\Desktop\#Project\RPG_text\RPG-text\RPG-text\RPG-text\obj\Debug\net8.0\RPG-text.csproj.CoreCompileInputs.cache
+C:\Users\ErmaelStarius\Desktop\#Project\RPG_text\RPG-text\RPG-text\RPG-text\obj\Debug\net8.0\RPG-text.sourcelink.json
+C:\Users\ErmaelStarius\Desktop\#Project\RPG_text\RPG-text\RPG-text\RPG-text\obj\Debug\net8.0\RPG-text.dll
+C:\Users\ErmaelStarius\Desktop\#Project\RPG_text\RPG-text\RPG-text\RPG-text\obj\Debug\net8.0\refint\RPG-text.dll
+C:\Users\ErmaelStarius\Desktop\#Project\RPG_text\RPG-text\RPG-text\RPG-text\obj\Debug\net8.0\RPG-text.pdb
+C:\Users\ErmaelStarius\Desktop\#Project\RPG_text\RPG-text\RPG-text\RPG-text\obj\Debug\net8.0\RPG-text.genruntimeconfig.cache
+C:\Users\ErmaelStarius\Desktop\#Project\RPG_text\RPG-text\RPG-text\RPG-text\obj\Debug\net8.0\ref\RPG-text.dll
