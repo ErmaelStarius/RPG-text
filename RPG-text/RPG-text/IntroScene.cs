@@ -26,7 +26,7 @@ namespace RPG_text
                 if (startkey.Key == ConsoleKey.Z)
                 {
                     Console.Clear();
-                    images.MainImage();
+                    images.GameLoading();
                     break;
 
                 }

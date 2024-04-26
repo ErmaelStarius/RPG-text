@@ -7,7 +7,26 @@ using System.Threading.Tasks;
 namespace RPG_text
 {
 
-    enum PlayerJob
+    public struct Player_Index
+    {
+        public static int _Level;
+        public static string _Job;
+        public static int _Money;
+
+        public static int _Hp;
+        public static int _Mp;
+        public static int _Exp;
+
+        public static int _MaxHp;
+        public static int _MaxMp;
+        public static int _MaxExp;
+
+        public static int _AttackDamage_index;
+        public static int _Deffence_index;
+    }
+
+
+    public enum PlayerJob
     {
         Swordman = 1,
         Archer = 2,
@@ -18,40 +37,57 @@ namespace RPG_text
 
     public class Player
     {
-        public int level;
-        public string job;
-        public int money;
+        public int _Level;
+        public string _Job;
+        public int _Money;
 
-        public int hp;
-        public int mp;
+        public int _Hp;
+        public int _Mp;
+        public int _Exp;
 
-        public int attackDamage_index;
-        public int deffence_index;
+        public int _MaxHp;
+        public int _MaxMp;
+        public int _MaxExp;
 
-        public string ShowPlayerLevel(int Level)
+        public int _AttackDamage_index;
+        public int _Deffence_index;
+
+        public Player()
         {
-            if (Level > 0)
-            {
-                if(Level.ToString().Length == 1)
-                {
-                    return $"{Level}" + "     ";
-                }
-                else if(Level.ToString().Length == 2)
-                {
-                    return$"{Level}" + "    ";
-                }
-                else if (Level.ToString().Length == 3)
-                {
-                    return $"{Level}" + "   ";
-                }
-                else
-                {
-                    return $"999" + "   ";
-                }
-            }
+            _Level = 1;
+            _Job = "초보자";
+            _Money = 1000;
 
-            return "1";
+            _Hp = 150;
+            _Mp = 100;
+            _Exp = 0;
+
+            _MaxHp = 150;
+            _MaxMp = 100;
+            _MaxExp = 100;
+
+            _AttackDamage_index = 90;
+            _Deffence_index = 75;
         }
+
+        public void BaseStatus()
+        {
+            Player_Index._Level = 1;
+            Player_Index._Job = "검사";
+            Player_Index._Money = 1000;
+
+            Player_Index._Hp = 150;
+            Player_Index._Mp = 100;
+            Player_Index._Exp = 0;
+
+            Player_Index._MaxHp = 150;
+            Player_Index._MaxMp = 100;
+            Player_Index._MaxExp = 100;
+
+            Player_Index._AttackDamage_index = 90;
+            Player_Index._Deffence_index = 75;
+        }
+
 
 
     }
