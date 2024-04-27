@@ -13,7 +13,33 @@ namespace RPG_text
 
         public string MainMenu_text = "\"메뉴를 선택하시오.\"";
 
-        
+        public string _MainChoice_01 = "\"소모품 상점으로 간다.\"";
+        public string _MainChoice_02 = "\"무기고로 간다.\"";
+        public string _MainChoice_03 = "\"검은숲으로 간다.\"";
+
+        public void MenuChoice(ConsoleKeyInfo dialogueKey)
+        {
+            switch (dialogueKey.Key)
+            {
+                case ConsoleKey.Z:
+                    {
+                        
+                    }
+                    break;
+
+                case ConsoleKey.X:
+                    {
+                        
+                    }
+                    break;
+
+                case ConsoleKey.C:
+                    {
+
+                    }
+                    break;
+            }
+        }
 
     }
 }

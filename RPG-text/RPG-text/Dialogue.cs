@@ -13,7 +13,9 @@ namespace RPG_text
         public void Chapter_001()
         {
             Images Images = new Images();
-            
+
+            Dialogue_MainMenu _MainMenu = new Dialogue_MainMenu();
+
             Dialogue_Player _Player = new Dialogue_Player();
             Dialogue_Bilbo  _Bilbo = new Dialogue_Bilbo();
             
@@ -45,22 +47,19 @@ namespace RPG_text
 
             ConsoleKeyInfo dialogue_006 = Images.MainImage(_Bilbo.Name, _Bilbo.Bilbo_text, _Player.player_text_01, _Player.player_text_02, _Player.player_text_03);
             
-            _Player.dialogue_006_A(dialogue_006);
+            _MainMenu.MenuChoice(dialogue_006);
+            
+            Console.Clear();
+            Images.GameLoading();
         }
 
 
         public void MainScene_Hobit()
         {
             Images Images = new Images();
-
-            Dialogue_Player _Player = new Dialogue_Player();
             Dialogue_MainMenu _MainMenu = new Dialogue_MainMenu();
 
-            
-            Console.Clear();
-            Images.GameLoading();
-
-            ConsoleKeyInfo dialogue_007 = Images.MainImage(_MainMenu.Name, _MainMenu.MainMenu_text, _Player.player_text_01, _Player.player_text_02, _Player.player_text_03);
+            ConsoleKeyInfo MainMenuChoice = Images.MainImage(_MainMenu.Name, _MainMenu.MainMenu_text, _MainMenu._MainChoice_01, _MainMenu._MainChoice_02, _MainMenu._MainChoice_03);
         }
     }
 }

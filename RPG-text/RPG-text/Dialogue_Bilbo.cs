@@ -64,7 +64,7 @@ namespace RPG_text
                     break;
 
                 case ConsoleKey.C:
-                    Bilbo_text = "\n반지원정대를 말하는 게로군? 좋아 내가 알려주도록 하지!!\"";
+                    Bilbo_text = "\"반지원정대를 말하는 게로군? 좋아 내가 알려주도록 하지!!\"";
                     break;
             }
         }
@@ -82,7 +82,7 @@ namespace RPG_text
                     break;
 
                 case ConsoleKey.C:
-                    Bilbo_text = "\n호빗골 너머의 검은 숲을 지나면 반지원정대를 모집하는 사람들이 있을걸세!\"";
+                    Bilbo_text = "\"호빗골 너머의 검은 숲을 지나면 반지원정대를 모집하는 사람들이 있을걸세!\"";
                     break;
             }
         }
