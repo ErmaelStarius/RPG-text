@@ -8,9 +8,21 @@ namespace RPG_text
 {
     public class Images
     {
-
-
         Player player = new Player();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -413,13 +425,13 @@ namespace RPG_text
                $"ㅁㅁ                                      ㅁ\n" +
                $"ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ\n" +
                $"ㅁㅁ                                      ㅁ\n" +
-               $"ㅁㅁ   이름: 프로도      체력: {Player_Index._Hp}           ㅁ         프로도 (나)\n" +
+               $"ㅁㅁ   이름: 프로도      체력:{player.ShowMyHp(player._Hp,player._MaxHp)}ㅁ         프로도 (나)\n" +
                $"ㅁㅁ                                      ㅁ\n" +
-               $"ㅁㅁ   레벨: {Player_Index._Level}            마력: {Player_Index._Mp}           ㅁ                        [Z]  {choice_01}\n" +
+               $"ㅁㅁ   레벨: {player.ShowMyLevel(player._Level)} 마력:{player.ShowMyMp(player._Mp,player._MaxMp)}ㅁ                        [Z]  {choice_01}\n" +
                $"ㅁㅁ                                      ㅁ\n" +
-               $"ㅁㅁ   클래스: {Player_Index._Job}          공격력: {Player_Index._AttackDamage_index}         ㅁ                        [X]  {choice_02}\n" +
+               $"ㅁㅁ   클래스: {player.ShowMyJob(player._Job)}공격력: {player.ShowMyAttackDamage(player._AttackDamage)}ㅁ                        [X]  {choice_02}\n" +
                $"ㅁㅁ                                      ㅁ\n" +
-               $"ㅁㅁ   소지금: {Player_Index._Money}          방어력: {Player_Index._Deffence_index}         ㅁ                        [C]  {choice_03}\n" +
+               $"ㅁㅁ   소지금: {player.ShowMyMoney(player._Money)}방어력: {player.ShowMyDeffenceDamage(player._DeffenceDamage)}ㅁ                        [C]  {choice_03}\n" +
                $"ㅁㅁ                                      ㅁ\n" + 
                $"ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ\n" +
                $"ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ\n"

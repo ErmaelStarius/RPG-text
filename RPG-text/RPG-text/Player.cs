@@ -7,25 +7,6 @@ using System.Threading.Tasks;
 namespace RPG_text
 {
 
-    public struct Player_Index
-    {
-        public static int _Level;
-        public static string _Job;
-        public static int _Money;
-
-        public static int _Hp;
-        public static int _Mp;
-        public static int _Exp;
-
-        public static int _MaxHp;
-        public static int _MaxMp;
-        public static int _MaxExp;
-
-        public static int _AttackDamage_index;
-        public static int _Deffence_index;
-    }
-
-
     public enum PlayerJob
     {
         Swordman = 1,
@@ -38,7 +19,7 @@ namespace RPG_text
     public class Player
     {
         public int _Level;
-        public string _Job;
+        public PlayerJob _Job;
         public int _Money;
 
         public int _Hp;
@@ -49,13 +30,24 @@ namespace RPG_text
         public int _MaxMp;
         public int _MaxExp;
 
-        public int _AttackDamage_index;
-        public int _Deffence_index;
+        public int _AttackDamage;
+        public int _DeffenceDamage;
+
+        public string Current_Hp;
+        public string Current_Mp;
+        public string Current_Exp;
+
+        public string Current_Level;
+        public string Current_Job;
+        public string Current_Money;
+
+        public string Current_AttackDamage;
+        public string Current_DeffenceDamage;
 
         public Player()
         {
             _Level = 1;
-            _Job = "초보자";
+            _Job = PlayerJob.Newbie;
             _Money = 1000;
 
             _Hp = 150;
@@ -66,29 +58,306 @@ namespace RPG_text
             _MaxMp = 100;
             _MaxExp = 100;
 
-            _AttackDamage_index = 90;
-            _Deffence_index = 75;
+            _AttackDamage = 90;
+            _DeffenceDamage = 75;
+            
+            Current_Hp = $"{_Hp}/{_MaxHp}";
+            Current_Mp = $"{_Mp}/{_MaxMp}";
+            Current_Exp = $"{_Exp}/{_MaxExp}";
+
+            Current_Job = "초보자";
+            Current_Level = $"{_Level}";
+            Current_Money = $"{_Money}";
+
+            Current_AttackDamage = $"{_AttackDamage}";
+            Current_DeffenceDamage = $"{_DeffenceDamage}";
+
+
         }
 
-        public void BaseStatus()
+        public string ShowMyHp(int _hp, int max_hp)
         {
-            Player_Index._Level = 1;
-            Player_Index._Job = "검사";
-            Player_Index._Money = 1000;
 
-            Player_Index._Hp = 150;
-            Player_Index._Mp = 100;
-            Player_Index._Exp = 0;
+            Current_Hp = $"{_hp}/{max_hp}";
 
-            Player_Index._MaxHp = 150;
-            Player_Index._MaxMp = 100;
-            Player_Index._MaxExp = 100;
+            int _Space = 12 - Current_Hp.Length;
 
-            Player_Index._AttackDamage_index = 90;
-            Player_Index._Deffence_index = 75;
+            switch (_Space)
+            {
+                case 0:
+                    Current_Hp = $"{_hp}/{max_hp}" + "";
+                    break;
+                case 1:
+                    Current_Hp = $"{_hp}/{max_hp}" + " ";
+                    break; 
+                case 2:
+                    Current_Hp = $"{_hp}/{max_hp}" + "  ";
+                    break;
+                case 3:
+                    Current_Hp = $"{_hp}/{max_hp}" + "   ";
+                    break;
+                case 4:
+                    Current_Hp = $"{_hp}/{max_hp}" + "    ";
+                    break;
+                case 5:
+                    Current_Hp = $"{_hp}/{max_hp}" + "     ";
+                    break;
+                case 6:
+                    Current_Hp = $"{_hp}/{max_hp}" + "      ";
+                    break;
+                case 7:
+                    Current_Hp = $"{_hp}/{max_hp}" + "       ";
+                    break;
+                case 8:
+                    Current_Hp = $"{_hp}/{max_hp}" + "        ";
+                    break;
+
+            }
+
+
+
+            return Current_Hp;
         }
 
+        public string ShowMyMp(int _mp, int max_mp)
+        {
 
+            Current_Mp = $"{_mp}/{max_mp}";
 
+            int _Space = 12 - Current_Mp.Length;
+
+            switch (_Space)
+            {
+                case 0:
+                    Current_Mp = $"{_mp}/{max_mp}" + "";
+                    break;
+                case 1:
+                    Current_Mp = $"{_mp}/{max_mp}" + " ";
+                    break;
+                case 2:
+                    Current_Mp = $"{_mp}/{max_mp}" + "  ";
+                    break;
+                case 3:
+                    Current_Mp = $"{_mp}/{max_mp}" + "   ";
+                    break;
+                case 4:
+                    Current_Mp = $"{_mp}/{max_mp}" + "    ";
+                    break;
+                case 5:
+                    Current_Mp = $"{_mp}/{max_mp}" + "     ";
+                    break;
+                case 6:
+                    Current_Mp = $"{_mp}/{max_mp}" + "      ";
+                    break;
+                case 7:
+                    Current_Mp = $"{_mp}/{max_mp}" + "       ";
+                    break;
+                case 8:
+                    Current_Mp = $"{_mp}/{max_mp}" + "        ";
+                    break;
+            }
+
+            return Current_Mp;
+        }
+        
+        public string ShowMyJob(PlayerJob job)
+        {
+            switch (job)
+            {
+                case PlayerJob.Swordman:
+                    Current_Job = $"검사" + "      ";
+                    break;
+                case PlayerJob.Archer:
+                    Current_Job = $"궁수" + "      ";
+                    break;
+                case PlayerJob.Magician:
+                    Current_Job = $"마법사" + "    ";
+                    break;
+                case PlayerJob.Newbie:
+                    Current_Job = $"초보자" + "    ";
+                    break;
+            }
+
+            return Current_Job;
+        }
+
+        public string ShowMyLevel(int _level)
+        {
+            Current_Level = $"{_level}";
+
+            int _Space = 11 - Current_Level.Length;
+
+            switch (_Space)
+            {
+                case 0:
+                    Current_Level = $"{_level}" + "";
+                    break;
+                case 1:
+                    Current_Level = $"{_level}" + " ";
+                    break;
+                case 2:
+                    Current_Level = $"{_level}" + "  ";
+                    break;
+                case 3:
+                    Current_Level = $"{_level}" + "   ";
+                    break;
+                case 4:
+                    Current_Level = $"{_level}" + "    ";
+                    break;
+                case 5:
+                    Current_Level = $"{_level}" + "     ";
+                    break;
+                case 6:
+                    Current_Level = $"{_level}" + "      ";
+                    break;
+                case 7:
+                    Current_Level = $"{_level}" + "       ";
+                    break;
+                case 8:
+                    Current_Level = $"{_level}" + "        ";
+                    break;
+                case 9:
+                    Current_Level = $"{_level}" + "         ";
+                    break;
+                case 10:
+                    Current_Level = $"{_level}" + "          ";
+                    break;
+                case 11:
+                    Current_Level = $"{_level}" + "           ";
+                    break;
+
+            }
+             
+            return Current_Level;
+        }
+
+        public string ShowMyMoney(int _money)
+        {
+            Current_Money = $"{_money}";
+
+            int _Space = 10 - Current_Money.Length;
+
+            switch (_Space)
+            {
+                case 0:
+                    Current_Money = $"{_money}" + "";
+                    break;
+                case 1:
+                    Current_Money = $"{_money}" + " ";
+                    break;
+                case 2:
+                    Current_Money = $"{_money}" + "  ";
+                    break;
+                case 3:
+                    Current_Money = $"{_money}" + "   ";
+                    break;
+                case 4:
+                    Current_Money = $"{_money}" + "    ";
+                    break;
+                case 5:
+                    Current_Money = $"{_money}" + "     ";
+                    break;
+                case 6:
+                    Current_Money = $"{_money}" + "      ";
+                    break;
+                case 7:
+                    Current_Money = $"{_money}" + "       ";
+                    break;
+                case 8:
+                    Current_Money = $"{_money}" + "        ";
+                    break;
+                case 9:
+                    Current_Money = $"{_money}" + "         ";
+                    break;
+            }
+
+            return Current_Money;
+        }
+
+        public string ShowMyAttackDamage(int _attackDamage)
+        {
+            Current_AttackDamage = $"{_attackDamage}";
+
+            int _Space = 9 - Current_AttackDamage.Length;
+
+            switch (_Space)
+            {
+                case 0:
+                    Current_AttackDamage = $"{_attackDamage}" + "";
+                    break;
+                case 1:
+                    Current_AttackDamage = $"{_attackDamage}" + " ";
+                    break;
+                case 2:
+                    Current_AttackDamage = $"{_attackDamage}" + "  ";
+                    break;
+                case 3:
+                    Current_AttackDamage = $"{_attackDamage}" + "   ";
+                    break;
+                case 4:
+                    Current_AttackDamage = $"{_attackDamage}" + "    ";
+                    break;
+                case 5:
+                    Current_AttackDamage = $"{_attackDamage}" + "     ";
+                    break;
+                case 6:
+                    Current_AttackDamage = $"{_attackDamage}" + "      ";
+                    break;
+                case 7:
+                    Current_AttackDamage = $"{_attackDamage}" + "       ";
+                    break;
+                case 8:
+                    Current_AttackDamage = $"{_attackDamage}" + "        ";
+                    break;
+                case 9:
+                    Current_AttackDamage = $"{_attackDamage}" + "         ";
+                    break;
+            }
+
+            return Current_AttackDamage;
+        }
+
+        public string ShowMyDeffenceDamage(int _deffenceDamage)
+        {
+            Current_DeffenceDamage = $"{_deffenceDamage}";
+
+            int _Space = 9 - Current_DeffenceDamage.Length;
+
+            switch (_Space)
+            {
+                case 0:
+                    Current_DeffenceDamage = $"{_deffenceDamage}" + "";
+                    break;
+                case 1:
+                    Current_DeffenceDamage = $"{_deffenceDamage}" + " ";
+                    break;
+                case 2:
+                    Current_DeffenceDamage = $"{_deffenceDamage}" + "  ";
+                    break;
+                case 3:
+                    Current_DeffenceDamage = $"{_deffenceDamage}" + "   ";
+                    break;
+                case 4:
+                    Current_DeffenceDamage = $"{_deffenceDamage}" + "    ";
+                    break;
+                case 5:
+                    Current_DeffenceDamage = $"{_deffenceDamage}" + "     ";
+                    break;
+                case 6:
+                    Current_DeffenceDamage = $"{_deffenceDamage}" + "      ";
+                    break;
+                case 7:
+                    Current_DeffenceDamage = $"{_deffenceDamage}" + "       ";
+                    break;
+                case 8:
+                    Current_DeffenceDamage = $"{_deffenceDamage}" + "        ";
+                    break;
+                case 9:
+                    Current_DeffenceDamage = $"{_deffenceDamage}" + "         ";
+                    break;
+            }
+
+            return Current_DeffenceDamage;
+        }
     }
 }
