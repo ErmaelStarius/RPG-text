@@ -9,6 +9,8 @@ namespace RPG_text
     internal class Dialogue_MainMenu
     {
 
+        Images images = new Images();
+
         public string Name = "메뉴";
 
         public string MainMenu_text = "\"메뉴를 선택하시오.\"";
@@ -36,6 +38,11 @@ namespace RPG_text
                 case ConsoleKey.C:
                     {
 
+                    }
+                    break;
+                case ConsoleKey.A:
+                    {
+                        
                     }
                     break;
             }

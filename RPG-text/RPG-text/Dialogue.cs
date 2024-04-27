@@ -51,6 +51,10 @@ namespace RPG_text
             
             Console.Clear();
             Images.GameLoading();
+
+            Images.MyStatus();
+
+            Console.ReadKey();
         }
 
 
@@ -58,7 +62,7 @@ namespace RPG_text
         {
             Images Images = new Images();
             Dialogue_MainMenu _MainMenu = new Dialogue_MainMenu();
-
+            
             ConsoleKeyInfo MainMenuChoice = Images.MainImage(_MainMenu.Name, _MainMenu.MainMenu_text, _MainMenu._MainChoice_01, _MainMenu._MainChoice_02, _MainMenu._MainChoice_03);
         }
     }
