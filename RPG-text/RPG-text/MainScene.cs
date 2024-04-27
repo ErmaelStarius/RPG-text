@@ -11,17 +11,23 @@ namespace RPG_text
 
         public void Dialogue_Manager()
         {
-
+            MainMenu mainMenu = new MainMenu();
+            LoadingScene loadingScene = new LoadingScene();
             Dialogue dialogue = new Dialogue();
+            
 
             // 빌보와의 대화
             dialogue.Chapter_001();
 
+            // 로딩화면
+            loadingScene.Loading();
+
+
             // 소모품점, 무기고, 검은 숲
-            dialogue.MainScene_Hobit();
+            mainMenu.MainScene_Hobit();
 
 
-
+            //
         }
     }
 }

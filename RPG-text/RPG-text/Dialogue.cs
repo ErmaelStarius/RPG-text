@@ -14,17 +14,15 @@ namespace RPG_text
         {
             Images Images = new Images();
 
-            Dialogue_MainMenu _MainMenu = new Dialogue_MainMenu();
-
             Dialogue_Player _Player = new Dialogue_Player();
-            Dialogue_Bilbo  _Bilbo = new Dialogue_Bilbo();
-            
-            
+            Dialogue_Bilbo _Bilbo = new Dialogue_Bilbo();
+
+
             ConsoleKeyInfo dialogue_001 = Images.MainImage(_Bilbo.Name, _Bilbo.Bilbo_text, _Player.player_text_01, _Player.player_text_02, _Player.player_text_03);
 
             _Bilbo.dialogue_001_Q(dialogue_001);
             _Player.dialogue_001_A(dialogue_001);
-            
+
             ConsoleKeyInfo dialogue_002 = Images.MainImage(_Bilbo.Name, _Bilbo.Bilbo_text, _Player.player_text_01, _Player.player_text_02, _Player.player_text_03);
 
             _Bilbo.dialogue_002_Q(dialogue_002);
@@ -33,37 +31,22 @@ namespace RPG_text
             ConsoleKeyInfo dialogue_003 = Images.MainImage(_Bilbo.Name, _Bilbo.Bilbo_text, _Player.player_text_01, _Player.player_text_02, _Player.player_text_03);
 
             _Bilbo.dialogue_003_Q(dialogue_003);
-            _Player.dialogue_003_A(dialogue_003);            
-            
+            _Player.dialogue_003_A(dialogue_003);
+
             ConsoleKeyInfo dialogue_004 = Images.MainImage(_Bilbo.Name, _Bilbo.Bilbo_text, _Player.player_text_01, _Player.player_text_02, _Player.player_text_03);
 
             _Bilbo.dialogue_004_Q(dialogue_004);
-            _Player.dialogue_004_A(dialogue_004);            
-            
+            _Player.dialogue_004_A(dialogue_004);
+
             ConsoleKeyInfo dialogue_005 = Images.MainImage(_Bilbo.Name, _Bilbo.Bilbo_text, _Player.player_text_01, _Player.player_text_02, _Player.player_text_03);
 
             _Bilbo.dialogue_005_Q(dialogue_005);
             _Player.dialogue_005_A(dialogue_005);
 
             ConsoleKeyInfo dialogue_006 = Images.MainImage(_Bilbo.Name, _Bilbo.Bilbo_text, _Player.player_text_01, _Player.player_text_02, _Player.player_text_03);
-            
-            _MainMenu.MenuChoice(dialogue_006);
-            
-            Console.Clear();
-            Images.GameLoading();
-
-            Images.MyStatus();
-
-            Console.ReadKey();
         }
 
 
-        public void MainScene_Hobit()
-        {
-            Images Images = new Images();
-            Dialogue_MainMenu _MainMenu = new Dialogue_MainMenu();
-            
-            ConsoleKeyInfo MainMenuChoice = Images.MainImage(_MainMenu.Name, _MainMenu.MainMenu_text, _MainMenu._MainChoice_01, _MainMenu._MainChoice_02, _MainMenu._MainChoice_03);
-        }
+
     }
 }

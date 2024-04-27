@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace RPG_text
 {
-    internal class Dialogue_MainMenu
+    internal class MainMenu
     {
-
-        Images images = new Images();
 
         public string Name = "메뉴";
 
@@ -47,6 +45,17 @@ namespace RPG_text
                     break;
             }
         }
+
+
+        public void MainScene_Hobit()
+        {
+            Images Images = new Images();
+            MainMenu _MainMenu = new MainMenu();
+
+            ConsoleKeyInfo MainMenuChoice = Images.MainImage(_MainMenu.Name, _MainMenu.MainMenu_text, _MainMenu._MainChoice_01, _MainMenu._MainChoice_02, _MainMenu._MainChoice_03);
+        }
+
+
 
     }
 }

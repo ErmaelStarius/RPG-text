@@ -10,6 +10,7 @@ namespace RPG_text
     public class IntroScene
     {
         Images images = new Images();
+        LoadingScene loadingScene = new LoadingScene();
 
         public void IntroMethod()
         {
@@ -25,8 +26,8 @@ namespace RPG_text
                 // 조건
                 if (startkey.Key == ConsoleKey.Z)
                 {
-                    Console.Clear();
-                    images.GameLoading();
+
+                    loadingScene.Loading();
                     break;
 
                 }
