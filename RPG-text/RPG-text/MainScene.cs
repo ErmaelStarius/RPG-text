@@ -27,7 +27,10 @@ namespace RPG_text
             mainMenu.MainScene_Hobit();
 
 
-            //
+            // 내 스테이터스
+            mainMenu.StatusMenu();
+
+            Console.ReadKey();
         }
     }
 }

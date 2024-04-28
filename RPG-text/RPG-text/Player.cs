@@ -16,6 +16,8 @@ namespace RPG_text
     }
 
 
+
+
     public class Player
     {
         public int _Level;
@@ -24,7 +26,7 @@ namespace RPG_text
 
         public int _Hp;
         public int _Mp;
-        public int _Exp;
+        public float _Exp;
 
         public int _MaxHp;
         public int _MaxMp;
@@ -32,6 +34,13 @@ namespace RPG_text
 
         public int _AttackDamage;
         public int _DeffenceDamage;
+
+        public int _MagicAttackDamage;
+        public int _MagicDeffenceDamage;
+
+        public float _EvasionRate;
+        public float _CriticalRate;
+        public float _DetectItemRate;
 
         public string Current_Hp;
         public string Current_Mp;
@@ -43,6 +52,13 @@ namespace RPG_text
 
         public string Current_AttackDamage;
         public string Current_DeffenceDamage;
+
+        public string Current_MagicAttackDamage;
+        public string Current_MagicDeffenceDamage;
+
+        public string Current_EvasionRate;
+        public string Current_CriticalRate;
+        public string Current_DetectItemRate;
 
         public Player()
         {
@@ -60,6 +76,14 @@ namespace RPG_text
 
             _AttackDamage = 90;
             _DeffenceDamage = 75;
+
+            _MagicAttackDamage = 85;
+            _MagicDeffenceDamage = 60;
+
+            _EvasionRate = 5;
+            _CriticalRate = 5;
+            _DetectItemRate = 5;
+
             
             Current_Hp = $"{_Hp}/{_MaxHp}";
             Current_Mp = $"{_Mp}/{_MaxMp}";
@@ -72,8 +96,16 @@ namespace RPG_text
             Current_AttackDamage = $"{_AttackDamage}";
             Current_DeffenceDamage = $"{_DeffenceDamage}";
 
+            Current_MagicAttackDamage = $"{_MagicAttackDamage}";
+            Current_MagicDeffenceDamage = $"{_MagicDeffenceDamage}";
+
+            Current_EvasionRate = $"{_EvasionRate}";
+            Current_CriticalRate = $"{_CriticalRate}";
+            Current_DetectItemRate = $"{_DetectItemRate}";
 
         }
+
+
 
         public string ShowMyHp(int _hp, int max_hp)
         {
@@ -113,11 +145,10 @@ namespace RPG_text
                     break;
 
             }
-
-
-
             return Current_Hp;
         }
+
+
 
         public string ShowMyMp(int _mp, int max_mp)
         {
@@ -159,7 +190,50 @@ namespace RPG_text
 
             return Current_Mp;
         }
-        
+
+
+
+        public string ShowMyEXP(float _exp, int max_exp)
+        {
+            Current_Exp = $"{_exp}/{max_exp}";
+
+            int _Space = 12 - Current_Exp.Length;
+
+            switch (_Space)
+            {
+                case 0:
+                    Current_Exp = $"{_exp}/{max_exp}" + "";
+                    break;
+                case 1:
+                    Current_Exp = $"{_exp}/{max_exp}" + " ";
+                    break;
+                case 2:
+                    Current_Exp = $"{_exp}/{max_exp}" + "  ";
+                    break;
+                case 3:
+                    Current_Exp = $"{_exp}/{max_exp}" + "   ";
+                    break;
+                case 4:
+                    Current_Exp = $"{_exp}/{max_exp}" + "    ";
+                    break;
+                case 5:
+                    Current_Exp = $"{_exp}/{max_exp}" + "     ";
+                    break;
+                case 6:
+                    Current_Exp = $"{_exp}/{max_exp}" + "      ";
+                    break;
+                case 7:
+                    Current_Exp = $"{_exp}/{max_exp}" + "       ";
+                    break;
+                case 8:
+                    Current_Exp = $"{_exp}/{max_exp}" + "        ";
+                    break;
+            }
+            return Current_Exp;
+        }
+    
+
+
         public string ShowMyJob(PlayerJob job)
         {
             switch (job)
@@ -177,9 +251,10 @@ namespace RPG_text
                     Current_Job = $"초보자" + "    ";
                     break;
             }
-
             return Current_Job;
         }
+
+
 
         public string ShowMyLevel(int _level)
         {
@@ -227,9 +302,10 @@ namespace RPG_text
                     break;
 
             }
-             
             return Current_Level;
         }
+
+
 
         public string ShowMyMoney(int _money)
         {
@@ -270,9 +346,10 @@ namespace RPG_text
                     Current_Money = $"{_money}" + "         ";
                     break;
             }
-
             return Current_Money;
         }
+
+
 
         public string ShowMyAttackDamage(int _attackDamage)
         {
@@ -313,9 +390,10 @@ namespace RPG_text
                     Current_AttackDamage = $"{_attackDamage}" + "         ";
                     break;
             }
-
             return Current_AttackDamage;
         }
+
+
 
         public string ShowMyDeffenceDamage(int _deffenceDamage)
         {
@@ -356,8 +434,142 @@ namespace RPG_text
                     Current_DeffenceDamage = $"{_deffenceDamage}" + "         ";
                     break;
             }
-
             return Current_DeffenceDamage;
         }
+
+
+
+        public string ShowMyEvasionRate(float _evasionRate)
+        {
+            Current_EvasionRate = $"{_evasionRate}";
+
+            int _Space = 9 - Current_EvasionRate.Length;
+
+            switch (_Space)
+            {
+                case 0:
+                    Current_EvasionRate = $"{_evasionRate}" + "";
+                    break;
+                case 1:
+                    Current_EvasionRate = $"{_evasionRate}" + " ";
+                    break;
+                case 2:
+                    Current_EvasionRate = $"{_evasionRate}" + "  ";
+                    break;
+                case 3:
+                    Current_EvasionRate = $"{_evasionRate}" + "   ";
+                    break;
+                case 4:
+                    Current_EvasionRate = $"{_evasionRate}" + "    ";
+                    break;
+                case 5:
+                    Current_EvasionRate = $"{_evasionRate}" + "     ";
+                    break;
+                case 6:
+                    Current_EvasionRate = $"{_evasionRate}" + "      ";
+                    break;
+                case 7:
+                    Current_EvasionRate = $"{_evasionRate}" + "       ";
+                    break;
+                case 8:
+                    Current_EvasionRate = $"{_evasionRate}" + "        ";
+                    break;
+                case 9:
+                    Current_EvasionRate = $"{_evasionRate}" + "         ";
+                    break;
+            }
+            return Current_EvasionRate;
+        }
+
+
+
+        public string ShowMyCriticalRate(float _criticalRate)
+        {
+            Current_CriticalRate = $"{_criticalRate}";
+
+            int _Space = 9 - Current_CriticalRate.Length;
+
+            switch (_Space)
+            {
+                case 0:
+                    Current_CriticalRate = $"{_criticalRate}" + "";
+                    break;
+                case 1:
+                    Current_CriticalRate = $"{_criticalRate}" + " ";
+                    break;
+                case 2:
+                    Current_CriticalRate = $"{_criticalRate}" + "  ";
+                    break;
+                case 3:
+                    Current_CriticalRate = $"{_criticalRate}" + "   ";
+                    break;
+                case 4:
+                    Current_CriticalRate = $"{_criticalRate}" + "    ";
+                    break;
+                case 5:
+                    Current_CriticalRate = $"{_criticalRate}" + "     ";
+                    break;
+                case 6:
+                    Current_CriticalRate = $"{_criticalRate}" + "      ";
+                    break;
+                case 7:
+                    Current_CriticalRate = $"{_criticalRate}" + "       ";
+                    break;
+                case 8:
+                    Current_CriticalRate = $"{_criticalRate}" + "        ";
+                    break;
+                case 9:
+                    Current_CriticalRate = $"{_criticalRate}" + "         ";
+                    break;
+            }
+            return Current_CriticalRate;
+        }
+
+
+
+        public string ShowMyDetectItemRate(float _detectItemRate)
+        {
+            Current_DetectItemRate = $"{_detectItemRate}";
+
+            int _Space = 9 - Current_DetectItemRate.Length;
+
+            switch (_Space)
+            {
+                case 0:
+                    Current_DetectItemRate = $"{_detectItemRate}" + "";
+                    break;
+                case 1:
+                    Current_DetectItemRate = $"{_detectItemRate}" + " ";
+                    break;
+                case 2:
+                    Current_DetectItemRate = $"{_detectItemRate}" + "  ";
+                    break;
+                case 3:
+                    Current_DetectItemRate = $"{_detectItemRate}" + "   ";
+                    break;
+                case 4:
+                    Current_DetectItemRate = $"{_detectItemRate}" + "    ";
+                    break;
+                case 5:
+                    Current_DetectItemRate = $"{_detectItemRate}" + "     ";
+                    break;
+                case 6:
+                    Current_DetectItemRate = $"{_detectItemRate}" + "      ";
+                    break;
+                case 7:
+                    Current_DetectItemRate = $"{_detectItemRate}" + "       ";
+                    break;
+                case 8:
+                    Current_DetectItemRate = $"{_detectItemRate}" + "        ";
+                    break;
+                case 9:
+                    Current_DetectItemRate = $"{_detectItemRate}" + "         ";
+                    break;
+            }
+            return Current_DetectItemRate;
+        }
+
+
+
     }
 }

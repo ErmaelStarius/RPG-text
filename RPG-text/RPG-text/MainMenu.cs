@@ -38,11 +38,6 @@ namespace RPG_text
 
                     }
                     break;
-                case ConsoleKey.A:
-                    {
-                        
-                    }
-                    break;
             }
         }
 
@@ -55,7 +50,12 @@ namespace RPG_text
             ConsoleKeyInfo MainMenuChoice = Images.MainImage(_MainMenu.Name, _MainMenu.MainMenu_text, _MainMenu._MainChoice_01, _MainMenu._MainChoice_02, _MainMenu._MainChoice_03);
         }
 
+        public void StatusMenu()
+        {
+            Images images = new Images();
 
+            images.MyStatus();
+        }
 
     }
 }
